@@ -89,3 +89,14 @@ func (bc *Blockchain) MinePendingTransactions(difficulty int) (block.Block, erro
 
 	return minedBlock, nil
 }
+
+// Faucet creates a coinbase transaction and adds it to the pending pool.
+func (bc *Blockchain) Faucet(recipient string, amount float64) error {
+
+	tx, err := transaction.NewCoinbase(recipient, amount)
+	if err != nil {
+		return err
+	}
+
+	return bc.AddTransaction(tx)
+}
