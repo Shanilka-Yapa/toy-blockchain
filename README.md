@@ -46,3 +46,8 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/thulshani30/toy-blockchain.git
+
+Run CLI application:
+
+```bash
+go run ./cmd/toy-blockchain
