@@ -11,7 +11,7 @@ type Config struct {
 func DefaultConfig() Config {
 	return Config{
 		Difficulty: 3,
-		BlockSize:  2,
+		BlockSize:  10,
 		DataPath:   "data/blockchain.json",
 	}
 }
